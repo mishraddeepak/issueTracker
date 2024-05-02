@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/mongoose');
-const port = 8000;
+const port = 2000
 const app = express();
 
 const expressLayouts = require('express-ejs-layouts');
@@ -21,6 +21,8 @@ app.set('layout extractScripts', true);
 app.use('/', require('./routes'));
 
 app.listen(port, (err) => {
+ 
+  console.log(port)
   if (err) {
     console.log('Error in running the server',err);
   }
